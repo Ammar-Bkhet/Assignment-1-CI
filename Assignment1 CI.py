@@ -5,7 +5,7 @@ from sympy import symbols, diff, hessian, solve
 
 x, y = symbols('x y')
 
-f_xy = x*3 + 2 * x2 + x*y + y*2
+f_xy = x**3 + 2 * x**2 + x*y + y**2
 
 gradient = np.array([diff(f_xy, x), diff(f_xy, y)])
 
@@ -23,7 +23,7 @@ for point in critical_points:
 x_vals = np.linspace(-3, 3, 100)
 y_vals = np.linspace(-3, 3, 100)
 X, Y = np.meshgrid(x_vals, y_vals)
-Z = X*3 + 2 * X2 + X * Y + Y*2
+Z = X**3 + 2 * X**2 + X * Y + Y**2
 
 # Create a figure for 3D and contour plots
 fig = plt.figure(figsize=(14, 6))
